@@ -7,7 +7,6 @@ import { CompanyView } from '../company-view/company-view';
 import { ListItems } from '../list-items/list-items';
 import { Total } from '../total/total';
 
-
 @Component({
   selector: 'app-invoice',
   standalone: true,
@@ -24,5 +23,8 @@ export class InvoiceComponent implements OnInit {
     this.invoice = this.service.getInvoice();
   }
 
+  removeItem(id: number) {
+    this.invoice.items = this.invoice.items.filter(item => item.id != id);
+  }
 }
 
