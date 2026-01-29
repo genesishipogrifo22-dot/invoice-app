@@ -5,12 +5,13 @@ import { InvoiceView } from '../invoice-view/invoice-view';
 import { ClientView } from '../client-view/client-view';
 import { CompanyView } from '../company-view/company-view';
 import { ListItems } from '../list-items/list-items';
+import { Total } from '../total/total';
 
 
 @Component({
   selector: 'app-invoice',
   standalone: true,
-  imports: [InvoiceView, ClientView, CompanyView, ListItems],
+  imports: [InvoiceView, ClientView, CompanyView, ListItems, Total],
   templateUrl: './invoice.html',
 })
 export class InvoiceComponent implements OnInit {
